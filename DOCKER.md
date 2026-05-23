@@ -55,10 +55,10 @@ A prebuilt multi-arch-friendly image is published to the GitHub Container
 Registry, so you can run OSIRIS without building anything:
 
 ```bash
-docker pull ghcr.io/aiacos/osiris:latest      # or a pinned tag, e.g. :0.1.0
+docker pull ghcr.io/simplifaisoul/osiris:latest      # or a pinned tag, e.g. :0.1.0
 docker run -d --name osiris \
   -p 3005:3000 --env-file .env --restart unless-stopped \
-  ghcr.io/aiacos/osiris:latest
+  ghcr.io/simplifaisoul/osiris:latest
 ```
 
 > If the package is **private**, authenticate first with a GitHub token that
