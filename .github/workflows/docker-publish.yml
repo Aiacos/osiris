@@ -39,7 +39,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/aiacos/osiris:latest
-            ghcr.io/aiacos/osiris:${{ github.sha }}
+            ghcr.io/aiacos/osiris-app:latest
+            ghcr.io/aiacos/osiris-app:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
