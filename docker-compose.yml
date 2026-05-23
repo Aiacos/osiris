@@ -1,11 +1,11 @@
 name: osiris
 services:
   osiris:
-    # `docker compose up -d` builds the image from the local Dockerfile and
-    # tags it `osiris:latest`. If you already have the image, the build step
-    # is skipped. Replace with a registry path (e.g. ghcr.io/<user>/osiris)
-    # to pull a prebuilt image instead of building.
-    image: osiris:latest
+    # Pulls the prebuilt image from GitHub Container Registry. The `build:`
+    # block is kept as a fallback: `docker compose up -d` uses the registry
+    # image if present/pullable, otherwise builds locally from the Dockerfile.
+    # Run `docker compose pull` to fetch the latest published image.
+    image: ghcr.io/aiacos/osiris:latest
     build:
       context: .
       dockerfile: Dockerfile
