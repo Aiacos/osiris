@@ -10,8 +10,9 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: osiris
+    # Host port is configurable via OSIRIS_PORT in .env (defaults to 3000).
     ports:
-      - "3000:3000"
+      - "${OSIRIS_PORT:-3000}:3000"
     # Optional API keys / scanner backend — copy .env.template to .env and
     # fill in what you need. Missing file is ignored (keyless feeds still work).
     env_file:
